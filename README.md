@@ -27,7 +27,7 @@ DB_PASSWORD=your_password
 - Run migrations and populate the database
 
 ```bash
-php artisan db:seed --class=TasksSeeder
+php artisan db:seed
 ```
 
 - Start the server
