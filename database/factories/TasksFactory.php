@@ -20,11 +20,12 @@ class TasksFactory extends Factory
     {
 
         // TODO: make faker source from enums
+        $faker = \Faker\Factory::create();
         return [
-            'title'      => $this->faker->sentence(4),
-            'due_date'   => $this->faker->datetimebetween('now', '+30 days'),
-            'priority'   => $this->faker->randomElement(['high', 'low', 'medium']),
-            'status'     => $this->faker->randomElement(['pending', 'in_progress', 'done']),
+            'title'    => $faker->sentence(4),
+            'due_date' => $faker->dateTimeBetween('now', '+30 days'),
+            'priority' => $faker->randomElement(['high', 'low', 'medium']),
+            'status'   => $faker->randomElement(['pending', 'in_progress', 'done']),
         ];
     }
 }
