@@ -71,3 +71,6 @@ http://127.0.0.1:8000/api/tasks/67
 ```bash
 http://127.0.0.1:8000/api/tasks/report?date=2026-03-31
 ```
+
+- `http://localhost:8000/docs/api`
+  To view api documentation
