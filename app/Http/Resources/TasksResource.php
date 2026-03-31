@@ -14,7 +14,7 @@ class TasksResource extends JsonResource
      */
     public function toArray(Request $request): array
     {
-        // formats JSON request
+        // formats the database entries to athere to JSON rules
         return [
             'id' => $this->id,
             'title' => $this->title,

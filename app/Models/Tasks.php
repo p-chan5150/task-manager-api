@@ -25,7 +25,7 @@ class Tasks extends Model
 
     public function scopeSorted($query)
     {
-        // Sort by priority (high → low), then due_date ascending
+        // Scope sort by priority (high → low), then due_date ascending
         return $query->orderByRaw("FIELD(priority, 'high', 'medium', 'low')")
             ->orderBy('due_date', 'asc');
     }

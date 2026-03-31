@@ -35,6 +35,7 @@ class StoreTasksRequest extends FormRequest
 
     protected function prepareForValidation()
     {
+        // Merge expected JSON payload with database column
         $this->merge([
             'due_date' => $this->dueDate
         ]);
