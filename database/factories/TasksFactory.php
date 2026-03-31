@@ -19,6 +19,7 @@ class TasksFactory extends Factory
     public function definition(): array
     {
 
+        // TODO: make faker source from enums
         return [
             'title'      => $this->faker->sentence(4),
             'due_date'   => $this->faker->datetimebetween('now', '+30 days'),
