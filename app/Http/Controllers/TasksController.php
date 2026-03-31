@@ -13,7 +13,7 @@ use App\Http\Requests\TaskReportRequest;
 class TasksController extends Controller
 {
     /**
-     * Return task sorted in ascending order by priority and date
+     * Return tasks sorted in ascending order by priority and date
      * Includes an optional status query
      */
     public function index(Request $request)

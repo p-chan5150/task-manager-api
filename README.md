@@ -93,6 +93,7 @@ DB_PASSWORD=
 APP_NAME=
 APP_ENV=
 APP_KEY=
+APP_URL=
 ```
 
 - Setup build command and start command
