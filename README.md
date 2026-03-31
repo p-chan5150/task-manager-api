@@ -74,3 +74,37 @@ http://127.0.0.1:8000/api/tasks/report?date=2026-03-31
 
 - `http://localhost:8000/docs/api`
   To view api documentation
+
+## Deployment
+
+- Push the project to a github repository
+- Sign up to railway or any hosting site of your choice
+- Setup a database server
+- Import the project repository
+- Setup environment variables in line with the database
+
+```bash
+DB_CONNECTION=
+DB_HOST=
+DB_PORT=
+DB_DATABASE=
+DB_USERNAME=
+DB_PASSWORD=
+APP_NAME=
+APP_ENV=
+APP_KEY=
+```
+
+- Setup build command and start command
+
+```bash
+composer install --no-dev --optimize-autoloader
+
+php artisan migrate:fresh --seed && php artisan serve --host 0.0.0.0 --port 8000
+```
+
+- Deploy
+
+# Troubleshooting
+
+- Set persist environment php version as 8.4
