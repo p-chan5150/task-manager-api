@@ -13,7 +13,7 @@ composer install
 ```
 
 - Copy .env example and rename to .env
-- Configure your MySql credentials from the following fields
+- Uncomment and configure your MySql credentials from the following fields
 
 ```bash
 DB_CONNECTION=mysql
