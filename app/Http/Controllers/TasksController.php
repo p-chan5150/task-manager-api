@@ -13,12 +13,12 @@ use App\Http\Requests\TaskReportRequest;
 class TasksController extends Controller
 {
     /**
-     * Display a all tasks in sortedby priority and due date
+     * Return task sorted in ascending order by priority and date
+     * Includes an optional status query
      */
     public function index(Request $request)
     {
 
-        // Optional status query
         $tasks = Tasks::query()
             ->when($request->query('status'), function ($query, $status) {
                 $query->where('status', $status);
@@ -76,11 +76,11 @@ class TasksController extends Controller
     }
 
     /**
-     * Return counts per priority and status for a given
-     * Date query handled on task report request
+     * Return counts per priority and status for a given date (defaults to current date when null)
      */
     public function report(TaskReportRequest $request)
     {
+        // Date query handled on task report request
         $date = $request->validated()['date'];
 
         $tasks = Tasks::whereDate('due_date', $date)->get();

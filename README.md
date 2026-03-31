@@ -40,8 +40,12 @@ php artisan serve
 
 - POST /api/tasks
 
+include id to return a specific task
+
 ```bash
 http://127.0.0.1:8000/api/tasks
+
+http://127.0.0.1:8000/api/tasks/56
 ```
 
 - GET /api/tasks
