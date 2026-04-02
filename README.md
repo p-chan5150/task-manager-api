@@ -79,7 +79,7 @@ http://127.0.0.1:8000/api/tasks/report?date=2026-03-31
 
 - Push the project to a github repository
 - Sign up to railway or any hosting site of your choice
-- Setup a database server
+- Setup a mysql database server
 - Import the project repository
 - Setup environment variables in line with the database
 
